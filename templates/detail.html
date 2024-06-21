@@ -4,9 +4,25 @@
 {% block title %} Detail Page Title {% endblock title %}
 
 {% block content %}
-<h1>Detail page</h1>
 
-<img src="{{ list_item.image.url }}" alt="">
-<p>{{ list_item.title }}</p>
+
+
+    <div class="my-3">
+        Return to <a href="{% url 'list' %}">Projects</a>
+    </div>
+    <div class="card mb-3 w-100 mx-auto">
+        <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{ list_item.image.url }}" class="img-fluid rounded-start" alt="{{ list_item.title }}">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+            <h5 class="card-title">{{ list_item.title }}</h5>
+            <p class="card-text">{{ list_item.description }}</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        </div>
+    </div>
 
 {% endblock content %}
