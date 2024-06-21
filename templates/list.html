@@ -1,0 +1,14 @@
+<!-- templates/about.html -->
+{% extends "base.html" %}
+
+{% block title %} List Page Title {% endblock title %}
+
+{% block content %}
+<h1>List page</h1>
+<ul>
+    {% for list_item in list_items %}
+        <li>{{ list_item.title }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

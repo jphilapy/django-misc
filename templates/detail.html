@@ -1,0 +1,12 @@
+<!-- templates/about.html -->
+{% extends "base.html" %}
+
+{% block title %} Detail Page Title {% endblock title %}
+
+{% block content %}
+<h1>Detail page</h1>
+
+<img src="{{ list_item.image.url }}" alt="">
+<p>{{ list_item.title }}</p>
+
+{% endblock content %}
